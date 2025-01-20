@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>I'm Looking For Job Now</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+        <style>
+            /* 태그 설정 */
+            a:visited {
+                color: black;
+            }
+            a:hover {
+                color: orangered;
+            }
+            hr {
+                margin: 0px;
+                border: 1px solid rgb(51, 47, 46);
+            }
+
+            /* 헤더 디자인 */
+            .header{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-family: "Bebas Neue", serif;
+            }
+            #header_logo{
+                font-size: 25px;
+                padding: 10px;
+                margin: 10px;
+            }
+            #header_menu{
+                list-style: none;
+                display: flex;
+                align-items: center;
+                margin: 0;
+
+                font-size: 25px;
+            }
+            #header_menu > li {
+                padding: 10px;
+                margin: 10px
+            }
+
+            /* 푸터 디자인 */
+            footer{
+                font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+                font-weight: 500;
+                font-size: 12px;
+
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 20px;
+
+                color: rgb(65, 65, 65);
+
+            }
+
+            .footer_contents{
+                display: flex;
+            }
+
+            #footer_contentBox {
+                width: 200px;
+                margin-left: 20px;
+            }
+            #footer_expBox{
+                width: 350px;
+                margin-left: 20px;
+            }
+
+            #footer_title{
+                text-align: center;
+            }
+
+            #footer_contentBox > p , #footer_expBox > p {
+                font-size: 15px;
+                font-weight: 700;
+                margin-top: 50px;
+            }
+            #footer_contentList{
+                list-style: none;
+                font-size: 15px;
+                color: gray;
+                padding-left: 0px;
+            }
+
+            /* 콘텐츠 정렬 및 페이지 마진 */
+            .contents_wrap {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 25vw;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+
+            /* 메인 텍스트 디자인 */
+            .mainText{
+                font-family: "Bebas Neue", serif;
+                font-size: 100px;
+                font-weight: 1;
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+
+            /* 어바웃 상단섹션 디자인 */
+
+            #sect_personalInfo{
+                width: 100%;
+                font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+                font-weight: 500;
+                font-size: 15px;
+            }
+
+            #sect_basicInfo{
+                display: flex;
+                width: 100%;
+            }
+
+            #name_wrap{
+                width: 30%;
+                padding-right: 50px;
+            }
+
+            #info_wrap{
+                width: 70%;
+            }
+
+            ul {
+                list-style: none;
+                padding: 10px;
+            }
+
+            li {
+                padding-bottom: 10px;
+                color: rgb(49, 49, 49);
+            }
+
+            /* 어바웃 하단섹션 디자인 */
+
+            table{
+                border-top: 2px solid rgb(49, 49, 49);
+                width: 100%;
+                padding-bottom: 50px;
+            }
+
+            th, td{
+                padding: 20px;
+                padding-top: 20px;
+            }
+            
+            #sect_skills{
+                font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+                font-weight: 500;
+                font-size: 15px;
+            }
+
+            /* 테이블 간격 및 폰트조정 */
+            #sect_skills{
+                width: 100%;
+                font-weight: 400;
+            }
+
+            #sect_skills > h3{
+                color: orangered;
+            }
+
+            #table_row > td:nth-child(1){
+                width: 10vw;
+            }
+            #table_row > td:nth-child(2){
+                width: 20vw;
+                font-weight: 600;
+            }
+            #table_row > td:nth-child(3){
+                color: gray;
+            }
+            #table_row2 > td{
+                width: 20vw;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+
+    <body onload="main()">
+        <div class="header_wrap">
+            <nav class="header">
+
+                <div>
+                    <a id="header_logo" href="">@hhyun_design</a>
+                </div>
+
+                <div>
+                    <ul id="header_menu">
+                        <li><a href="index.html">WORKS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <hr>
+        </div>
+
+        <div class="contents_wrap">
+
+            <h1 class="mainText">ABOUT</h1>
+
+            <section id="sect_personalInfo">
+                <div id="sect_basicInfo">
+                    <div id="name_wrap">
+                        <h3>Seunghyun Lee</h3>
+                    </div>
+    
+                    <div id="info_wrap">
+                        <div>
+                            <h3>Contact</h3>
+                            <ul>
+                                <li>010-6656-4494</li>
+                                <li>you06223@naver.com</li>
+                            </ul>
+                        </div>
+        
+                        <div>
+                            <h3>Personal Info</h3>
+                            <ul>
+                                <li>2000.03.24</li>
+                            </ul>
+                        </div>
+        
+                        <div>
+                            <h3>Major</h3>
+                            <ul>
+                                <li>Newmedia Advertisement Communication Design</li>
+                                <li>Video Animation Design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            
+            <section id="sect_personalInfo">
+                <section id="sect_skills">
+                    <h3>외국어 | Language</h3>
+                    <table>
+                        <tr id="table_row">
+                            <td>Opic</td>
+                            <td>Intermediate Low</td>
+                            <td>2A1660409435</td>
+                        </tr>
+                    </table>
+                </section>
+            
+                <section id="sect_skills">
+                    <h3>학력 | Education</h3>
+                    <table>
+                        <tr id="table_row">
+                            <td>2019 - 2025 (Expected)</td>
+                            <td>Hansung University / Seoul Korea</td>
+                            <td>attending school</td>
+                        </tr>
+                        <tr id="table_row">
+                            <td>2015 - 2018</td>
+                            <td>Yongmoon Highschool</td>
+                            <td>graduated</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="sect_skills">
+                    <h3>학내외 활동 | Experience Career</h3>
+                    <table>
+                        <tr id="table_row">
+                            <td>19.03.22 ~ 20.12.17</td>
+                            <td>디자인대학 일러스트 소모임 : HRT</td>
+                            <td>일러스트</td>
+                        </tr>
+                        <tr id="table_row">
+                            <td>19.10.13 ~ 19.11.17</td>
+                            <td>2019학년도 창업 아이디어 경진대회</td>
+                            <td>UXUI 디자인</td>
+                        </tr>
+                        <tr id="table_row">
+                            <td>24.04.08 ~ 24.06.21</td>
+                            <td>2024-1 산학 공동연구 프로젝트</td>
+                            <td>캐릭터 브랜딩</td>
+                        </tr>
+                        <tr id="table_row">
+                            <td>24.07.01 ~ 24.08.31</td>
+                            <td>퀄컴 주관 On-device AI 기반 다이어리 App 개발 프로젝트</td>
+                            <td>UI BI 디자인</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="sect_skills">
+                    <h3>수상경력 | Prize</h3>
+                    <table>
+                        <tr id="table_row">
+                            <td>24.11.08</td>
+                            <td>제 19회 D2B디자인페어</td>
+                            <td>입선</td>
+                        </tr>
+                        <tr id="table_row">
+                            <td>24.10.05</td>
+                            <td>경기도 공공디자인 공모전</td>
+                            <td>금상</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="sect_skills">
+                    <h3>경력사항 | Work Experience</h3>
+                    <table>
+                        <tr id="table_row">
+                            <td>2018.11 ~ Present</td>
+                            <td>가우디 미술학원</td>
+                            <td>Assistant instructor</td>
+                        </tr>
+                        <tr id="table_row">
+                            <td>2021.03 ~ 2023.08</td>
+                            <td>나무 애니메이션</td>
+                            <td>Motion Graphic Designer</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="sect_skills">
+                    <h3>사용 프로그램 | Skills</h3>
+                    <table>
+                        <th></th>
+                        <tr id="table_row2">
+                            <td>Photoshop</td>
+                            <td>Illustrator</td>
+                            <td>InDesign</td>
+                        </tr>
+                        <tr id="table_row2">
+                            <td>AfterEffects</td>
+                            <td>PremierPro</td>
+                            <td>ClipStudio</td>
+                        </tr>
+                        <th></th>
+                        <tr id="table_row2">
+                            <td>Maya</td>
+                            <td>Cinema4D</td>
+                            <td>Substance<br>Painter</td>    
+                        </tr>
+                        <tr id="table_row2">
+                            <td>Unreal</td>
+                            <td>Vray</td>
+                        </tr>
+                        <th></th>
+                        <tr id="table_row2">
+                            <td>HTML</td>
+                            <td>CSS</td>
+                            <td>JAVA<br>SCRIPT</td>    
+                        </tr>
+                    </table>
+                </section>
+
+                
+            </section>
+            
+        </div>
+        <hr>
+        <footer>
+            <div id="footer_contentBox">
+                <p id="footer_title">ABOUT ME</p>
+            </div>
+            <section>
+                <div class="footer_contents">
+
+                    <div id="footer_contentBox">
+                        <p>2D Skills</p>
+                        <ul id="footer_contentList">
+                            <li>Photoshop</li>
+                            <li>Illustrator</li>
+                            <li>After Effects</li>
+                            <li>Premier Pro</li>
+                        </ul>
+                    </div>
+
+                    <div id="footer_contentBox">
+                        <p>3D Skills</p>
+                        <ul id="footer_contentList">
+                            <li>Maya</li>
+                            <li>Cinema 4D</li>
+                            <li>Substance Painter</li>
+                            <li>Unreal Engine</li>
+                        </ul>
+                    </div>
+
+                    <div id="footer_expBox">
+                        <p>Career</p>
+                        <ul id="footer_contentList">
+                            <li>(2019-2025) Teacher - Gaudi Design Institute</li>
+                            <li>(2021-2023) Compositor - Namu Animation,.Ltd</li>
+                        </ul>
+                    </div>
+
+                    <div id="footer_contentBox">
+                        <p>Contact</p>
+                        <ul id="footer_contentList">
+                            <li>you06223@naver.com</li>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+        </footer>
+        
+    </body>
+</html>

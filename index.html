@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1" charset="utf-8" />
+        <title>I'm Looking For Job Now</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+        <style>
+            body{
+                width: 100%;
+                align-self: center;
+            }
+            /* 태그 설정 */
+            a:visited {
+                color: black;
+            }
+            a:hover {
+                color: orangered;
+            }
+            hr {
+                margin: 0px;
+                border: 1px solid rgb(51, 47, 46);
+            }
+
+            /* 헤더 디자인 */
+            .header{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-family: "Bebas Neue", serif;
+            }
+            #header_logo{
+                font-size: 25px;
+                padding: 10px;
+                margin: 10px;
+            }
+            #header_menu{
+                list-style: none;
+                display: flex;
+                align-items: center;
+                margin: 0;
+
+                font-size: 25px;
+            }
+            #header_menu > li {
+                padding: 10px;
+                margin: 10px
+            }
+
+            /* 푸터 디자인 */
+            footer{
+                font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+                font-weight: 500;
+                font-size: 12px;
+
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 20px;
+
+                color: rgb(65, 65, 65);
+
+            }
+
+            .footer_contents{
+                display: flex;
+            }
+
+            #footer_contentBox {
+                width: 200px;
+                margin-left: 20px;
+            }
+            #footer_expBox{
+                width: 350px;
+                margin-left: 20px;
+            }
+
+            #footer_title{
+                text-align: center;
+            }
+
+            #footer_contentBox > p , #footer_expBox > p {
+                font-size: 15px;
+                font-weight: 700;
+                margin-top: 50px;
+            }
+            #footer_contentList{
+                list-style: none;
+                font-size: 15px;
+                color: gray;
+                padding-left: 0px;
+            }
+
+            /* 콘텐츠 정렬 및 페이지 마진 ================== */
+            .contents_wrap {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 25vw;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+
+            /* 메인 텍스트 디자인 */
+            .mainText{
+                font-family: "Bebas Neue", serif;
+                font-size: 100px;
+                font-weight: 1;
+                padding-top: 60px;
+                padding-bottom: 60px;
+                text-align: center;
+            }
+
+            /* 포트폴리오 섹션 디자인 */
+            .portfolio_section{
+                width: 100%;
+                display: flex;
+                align-items: top;
+                padding-bottom: 150px;
+            }
+
+            #portfolio_img {
+                padding-right: 20px;
+                width: 500px;
+                z-index: 0;
+            }
+
+            #portfolio_text{
+                width: 100%;
+            }
+
+            #portfolio_text > h3 {
+                font-family: "Bebas Neue", serif;
+                font-weight: 1;
+                font-size: 50px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                line-height: 80%;
+            }
+
+            #portfolio_text > button {
+                background-color: rgb(196, 188, 185);
+                color: white;
+                border: none;
+                border-radius: 5px;
+                margin: 0px;
+                padding: 5px;
+                font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+            }
+
+            #portfolio_text > p {
+                font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+                font-weight: 500;
+                font-size: 18px;
+                margin-top: 20px;
+                color: gray;
+            }
+            
+            @media (max-width: 1300px){
+                .mainText {
+                    line-height: 80%
+                }
+                .contents_wrap {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    margin: 25vw;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+
+                .portfolio_section{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: top;
+                    padding-bottom: 150px;
+                }
+                
+                #portfolio_img {
+                    padding-right: 0px;
+                    width: 100%;
+                    z-index: 0;
+                }
+                .footer_contents{
+                    display: flex;
+                    flex-direction:column ;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body onload="main()">
+        <div class="header_wrap">
+            <nav class="header">
+
+                <div>
+                    <a id="header_logo" href="">@hhyun_design</a>
+                </div>
+
+                <div>
+                    <ul id="header_menu">
+                        <li><a href="index.html">WORKS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <hr>
+        </div>
+
+        <div class="contents_wrap">
+
+            <h1 class="mainText">DESIGN WORKS</h1>
+
+            <section class="portfolio_section">
+                
+                <a href="./portfolio_mmgFriends.html"><img id="portfolio_img" src="./src/mmg_Thumb.png" alt=""></a>
+                
+                <div id="portfolio_text">
+                    <hr>
+                    <h3>MMG FRIENDS</h3>
+                    <button>BI/CI</button> <button>3D</button> <button>GRAPHIC</button>
+                    <p>여행짐 운반 서비스 기업에 캐릭터 브랜딩을 진행했습니다.</p>
+                </div>
+            </section>
+
+            <section class="portfolio_section">
+                <a href="./portfolio_brewers.html"><img id="portfolio_img" src="./src/brewers_Thumb.png" alt=""></a>
+                <div id="portfolio_text">
+                    <hr>
+                    <h3>BREWERS</h3>
+                    <button>BI/CI</button> <button>GRAPHIC</button>
+                    <p>커피 핸드드립 브랜드 브루어즈의 브랜드 아이덴티티 디자인을 진행했습니다.</p>
+                </div>
+            </section>
+
+            <section class="portfolio_section">
+                <a href="./portfolio_autumnBreeze.html"><img id="portfolio_img" src="./src/autumnCandle_Thumb.png" alt=""></a>
+                <div id="portfolio_text">
+                    <hr>
+                    <h3>Autumn Breeze</h3>
+                    <button>PACKAGE</button> <button>GRAPHIC</button>
+                    <p>창원의 한 개인 카페에서 가을맞이 이벤트로 증정될 캔들의 패키지 디자인을 진행했습니다.</p>
+                </div>
+            </section>
+        </div>
+        <hr>
+        <footer>
+            <div id="footer_contentBox">
+                <p id="footer_title">ABOUT ME</p>
+            </div>
+            <section>
+                <div class="footer_contents">
+
+                    <div id="footer_contentBox">
+                        <p>2D Skills</p>
+                        <ul id="footer_contentList">
+                            <li>Photoshop</li>
+                            <li>Illustrator</li>
+                            <li>After Effects</li>
+                            <li>Premier Pro</li>
+                        </ul>
+                    </div>
+
+                    <div id="footer_contentBox">
+                        <p>3D Skills</p>
+                        <ul id="footer_contentList">
+                            <li>Maya</li>
+                            <li>Cinema 4D</li>
+                            <li>Substance Painter</li>
+                            <li>Unreal Engine</li>
+                        </ul>
+                    </div>
+
+                    <div id="footer_expBox">
+                        <p>Career</p>
+                        <ul id="footer_contentList">
+                            <li>(2019-2025) Teacher - Gaudi Design Institute</li>
+                            <li>(2021-2023) Compositor - Namu Animation,.Ltd</li>
+                        </ul>
+                    </div>
+
+                    <div id="footer_contentBox">
+                        <p>Contact</p>
+                        <ul id="footer_contentList">
+                            <li>you06223@naver.com</li>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+        </footer>
+        
+    </body>
+</html>

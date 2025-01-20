@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>I'm Looking For Job Now</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+        <style>
+            /* 태그 설정 */
+            a:visited {
+                color: black;
+            }
+            a:hover {
+                color: orangered;
+            }
+            hr {
+                margin: 0px;
+                border: 1px solid rgb(51, 47, 46);
+            }
+
+            /* 헤더 디자인 */
+            .header{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-family: "Bebas Neue", serif;
+            }
+            #header_logo{
+                font-size: 25px;
+                padding: 10px;
+                margin: 10px;
+            }
+            #header_menu{
+                list-style: none;
+                display: flex;
+                align-items: center;
+                margin: 0;
+
+                font-size: 25px;
+            }
+            #header_menu > li {
+                padding: 10px;
+                margin: 10px
+            }
+
+            /* 푸터 디자인 */
+            /* 푸터 디자인 */
+            footer{
+                font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+                font-weight: 500;
+                font-size: 12px;
+
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 20px;
+
+                color: rgb(65, 65, 65);
+
+            }
+
+            .footer_contents{
+                display: flex;
+            }
+
+            #footer_contentBox {
+                width: 200px;
+                margin-left: 20px;
+            }
+            #footer_expBox{
+                width: 350px;
+                margin-left: 20px;
+            }
+
+            #footer_contentBox > p , #footer_expBox > p {
+                font-size: 15px;
+                font-weight: 700;
+                margin-top: 50px;
+            }
+
+            #footer_title{
+                text-align: center;
+            }
+
+            #footer_contentList{
+                list-style: none;
+                font-size: 15px;
+                color: gray;
+                padding-left: 0px;
+            }
+
+            /* 콘텐츠 정렬 및 페이지 마진 */
+            .contents_wrap {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 25vw;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+
+            /* 메인 텍스트 디자인 */
+            .mainText{
+                font-family: "Bebas Neue", serif;
+                font-size: 100px;
+                font-weight: 1;
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+
+            /* 포트폴리오 섹션 디자인 */
+            
+            .portfolio_designImage > img{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .portfolio_designImage > img{
+                width: 800px;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            #backToIndex {
+                font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+                font-weight: 500;
+                font-size: 15px;
+                margin: 100px;
+                text-decoration: none;
+                color: gray;
+            }
+            #backToIndex:hover {
+                color: orangered;
+            }
+
+            #project_typo {
+                display: flex;
+                flex-direction: column;
+                width: 800px;
+                padding: 100px;
+            }
+            @media (max-width: 800px){
+                .portfolio_designImage > img {
+                    width: 100vw;
+                }
+            }
+        </style>
+    </head>
+
+    <body onload="main()">
+        <div class="header_wrap">
+            <nav class="header">
+
+                <div>
+                    <a id="header_logo" href="">@hhyun_design</a>
+                </div>
+
+                <div>
+                    <ul id="header_menu">
+                        <li><a href="index.html">WORKS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <hr>
+        </div>
+
+        <div class="contents_wrap">
+            <section id="project_typo">
+                <img src="src/portfolio_autumnBreeze/AutumnBreeze_Typo.png" alt="">
+            </section>
+
+            <section class="portfolio_designImage">
+                <img src="src/portfolio_autumnBreeze/autumnBreeze_1.jpg" alt="1">
+                <img src="src/portfolio_autumnBreeze/autumnBreeze_2.jpg" alt="2">
+                <img src="src/portfolio_autumnBreeze/autumnBreeze_3.jpg" alt="3">
+                <img src="src/portfolio_autumnBreeze/autumnBreeze_4.jpg" alt="">
+                <img src="src/portfolio_autumnBreeze/autumnBreeze_5.jpg" alt="">
+                <img src="src/portfolio_autumnBreeze/autumnBreeze_6.jpg" alt="">
+                <img src="src/portfolio_autumnBreeze/autumnBreeze_7.jpg" alt="">
+                <img src="src/portfolio_autumnBreeze/autumnBreeze_8.jpg" alt="">
+            </section>
+            <a id="backToIndex" href="./index.html">HOME</a>
+        </div>
+        <hr>
+        <footer>
+            <div id="footer_contentBox">
+                <p id="footer_title">ABOUT ME</p>
+            </div>
+            <section>
+                <div class="footer_contents">
+
+                    <div id="footer_contentBox">
+                        <p>2D Skills</p>
+                        <ul id="footer_contentList">
+                            <li>Photoshop</li>
+                            <li>Illustrator</li>
+                            <li>After Effects</li>
+                            <li>Premier Pro</li>
+                        </ul>
+                    </div>
+
+                    <div id="footer_contentBox">
+                        <p>3D Skills</p>
+                        <ul id="footer_contentList">
+                            <li>Maya</li>
+                            <li>Cinema 4D</li>
+                            <li>Substance Painter</li>
+                            <li>Unreal Engine</li>
+                        </ul>
+                    </div>
+
+                    <div id="footer_expBox">
+                        <p>Career</p>
+                        <ul id="footer_contentList">
+                            <li>Mentor - Gaudi Art&Design Institute</li>
+                            <li>Compositor - Namu Animation,.Ltd</li>
+                        </ul>
+                    </div>
+
+                    <div id="footer_contentBox">
+                        <p>Contact</p>
+                        <ul id="footer_contentList">
+                            <li>you06223@naver.com</li>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+        </footer>
+        
+    </body>
+</html>
